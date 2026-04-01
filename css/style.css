@@ -247,7 +247,7 @@ textarea {
 
 @font-face {
   font-family: "Gotham";
-  src: url("../fonts/Gotham Regular.woff") format("woff");
+  src: url("../fonts/Gotham Light.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -269,6 +269,7 @@ textarea {
 /* Optional: use Gotham as the default site font */
 body {
   font-family: "Gotham", Arial, sans-serif;
+  margin: 0;
 }
 
 :root{
@@ -281,11 +282,242 @@ body {
   --blue2: #2c6895;
 }
 
+.hero{
+  width: 100%;
+}
+
+.inner{
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
 .hero h1{
   font-family: "Gotham", Arial, sans-serif;
   font-weight: bold;
+  font-size: 7rem;
+  line-height: .9;
 }
 
 .hero__bottom h1{
   font-weight: 900;
+}
+
+.hero__logo{
+  width: 175px;
+  margin-top: 2rem;
+}
+
+.hero{
+  background-image: url("/img/WDRWS-Landing-hero.jpeg");
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 902/863;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__inner{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.hero h1{
+  color: white;
+  margin: auto 0 0;
+}
+
+.hero__bottom{
+  background: rgb(121 157 79 / 0.84);
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 8rem;
+}
+img{
+  max-width: 100%;
+}
+
+.hero__bottom h1 {
+  font-size: 9rem;
+  line-height: .9;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+.section{
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+.section .inner{
+  padding: 3rem;
+  font-weight: normal;
+}
+
+.section .inner p{
+  max-width: 25em;
+}
+
+.section h2{
+  font-size: 6rem;
+  margin: 0;
+  line-height: .9;
+}
+
+.section--1{
+  background: var(--grey);
+  color: white;
+}
+
+.section--2{
+  background: var(--tan);
+  color: white;
+}
+
+.section--3{
+  background-image: url("/img/WDRWS-Landing-4.jpeg");
+  background-size: cover;
+  padding-top: 30vw;
+}
+
+.section__bottom{
+  background: rgb(44 104 149 / 0.85);
+  color: white;
+}
+
+.section--4{
+  background: var(--green);
+  color: white;
+}
+
+.section--4 h2{
+  margin-bottom: 4rem;
+}
+
+.flex{
+  display: flex;
+  gap: 1rem;
+}
+
+.third{
+  width: 30%;
+  flex-grow: 1;
+}
+
+.twothirds{
+  width: 60%;
+  flex-grow: 1;
+}
+
+.contact-form{
+  background: var(--blue2);
+  padding: 2rem;
+}
+
+.contact-form input[type=submit]{
+  border: 0;
+}
+
+.contact-form a, .contact-form input[type=submit]{
+  background: var(--blue);
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.contact-form input[type=text]{
+  background: rgb(28 135 200 / 0.13);
+  color: #ffffff;
+  border: #9eb6cb solid 1px;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.contact-form p{
+  font-size: 1rem;
+}
+
+
+
+
+.contact-form label{
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.contact-form input[type=text]::placeholder{
+  color: #9eb6cb;
+}
+
+.contact-form h3{
+  margin: 0 0 2rem;
+  font-size: 2rem;
+}
+
+.contact-form h3:nth-child(4){
+  margin-top: 2rem;
+}
+
+.section--5{
+  background: var(--blue);
+  color: white;
+}
+
+.section--5 h3{
+  color: var(--yellow);
+  margin-bottom: 0;
+}
+
+.section--5 p{
+  margin-top: 0;
+}
+
+.section--6{
+  background: var(--tan);
+  color: white;
+  background-image: url("/img/dots.png");
+  background-position: center;
+}
+
+.section--6 h3{
+  font-size: 3.5rem;
+  margin-top: 0;
+}
+
+.section--6 a{
+  color: white;
+  text-decoration: none;
+}
+
+.section--6 .inner{
+  display: flex;
+  justify-content: space-between;
+}
+
+.section--6 span{
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-decoration-thickness: 4px;
+}
+
+.section--6 .inner :last-child{
+  text-align: right;
+}
+
+footer{
+  background: var(--green);
+  padding: 4rem;
+}
+
+footer img{
+  width: 300px;
+  max-width: 100%;
 }
