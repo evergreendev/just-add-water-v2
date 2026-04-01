@@ -46,20 +46,50 @@
 </div>
 <div class="section section--1">
   <div class="inner">
-    <h2>Wa</h2>
-    <p>place</p>
+    <h2>The Problem</h2>
+    <p>This data is derived from an independent study conducted by the South Dakota School of Mines that was
+      subsequently verified by the United States Geological Survey (USGS). To access the comprehensive, in-depth study,
+      please consult our <a href="https://wdrws.org">technical site</a>.
+    </p>
   </div>
 
   <img src="img/WDRWS-Landing-2.jpeg" alt=""/>
-  <div class="inner">
-    <p>aaaa</p>
-  </div>
+  <!--  <div class="inner">
+      <p>aaaa</p>
+    </div>-->
 </div>
 <div class="section section--2">
   <img src="/img/WDRWS-Landing-3.jpeg" alt=""/>
   <div class="inner">
-    <h2>The Aquifer is declining</h2>
-    <p>laa</p>
+    <h2>Urgency</h2>
+
+        <p>Western South Dakota’s need for supplemental water shifts from a long-term concern to an immediate reality
+          when
+          drought lingers beyond a single season. As streams thin, reservoirs shrink, and demand stays steady, the
+          region
+          quickly reaches a point where existing supplies can’t keep up — making additional water sources essential.</p>
+
+        <p>The map below is updated with the latest moisture data from the U.S. Drought Monitor — use it to see whether
+          your
+          community is currently experiencing drought.
+        </p>
+
+    <img id="drought-monitor-image" src="https://droughtmonitor.unl.edu/data/png/current/current_sd_text.png"
+         alt=""/>
+    <p class="footnote">
+      The U.S. Drought Monitor is jointly produced by the National Drought Mitigation Center at the University of
+      Nebraska-Lincoln, the United States Department of Agriculture, the National Oceanic and Atmospheric
+      Administration and the National Aeronautics and Space Administration. Map courtesy of NDMC.
+    </p>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const img = document.getElementById('drought-monitor-image');
+        if (img) {
+          img.src = `https://droughtmonitor.unl.edu/data/png/current/current_sd_text.png?cb=${Date.now()}`;
+        }
+      });
+    </script>
   </div>
 </div>
 <div class="section section--3">
@@ -97,7 +127,7 @@
           <form>
             <label><span>Email address</span>
               <input type="text" name="email" placeholder="email@example.com"/>
-              <input type="submit" value="Subscribe" />
+              <input type="submit" value="Subscribe"/>
             </label>
           </form>
         </div>
@@ -111,15 +141,18 @@
   <div class="inner">
     <h2>Your Concerns Addressed.</h2>
     <div class="flex">
-      <div class="third"><h3>X aaaaa aaa?</h3><p>augue sed egestas elend,
-        tortor sem sodales mi, eu
-        luctus purus enim a erat.</p></div>
-      <div class="third"><h3>X aaaaa aaa?</h3><p>augue sed egestas elend,
-        tortor sem sodales mi, eu
-        luctus purus enim a erat.</p></div>
-      <div class="third"><h3>X aaaaa aaa?</h3><p>augue sed egestas elend,
-        tortor sem sodales mi, eu
-        luctus purus enim a erat.</p></div>
+      <div class="third"><h3>X aaaaa aaa?</h3>
+        <p>augue sed egestas elend,
+          tortor sem sodales mi, eu
+          luctus purus enim a erat.</p></div>
+      <div class="third"><h3>X aaaaa aaa?</h3>
+        <p>augue sed egestas elend,
+          tortor sem sodales mi, eu
+          luctus purus enim a erat.</p></div>
+      <div class="third"><h3>X aaaaa aaa?</h3>
+        <p>augue sed egestas elend,
+          tortor sem sodales mi, eu
+          luctus purus enim a erat.</p></div>
     </div>
   </div>
 </div>
