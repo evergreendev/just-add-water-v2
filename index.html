@@ -22,7 +22,24 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body class="menu-closed">
+<nav class="nav">
+  <button class="nav__toggle" aria-label="Toggle menu">
+    <span class="nav__toggle-box">
+      <span class="nav__toggle-inner"></span>
+    </span>
+  </button>
+  <div class="nav__overlay">
+    <ul class="nav__menu">
+      <li class="nav__item"><a href="#problem" class="nav__link">The Problem</a></li>
+      <li class="nav__item"><a href="#urgency" class="nav__link">Urgency</a></li>
+      <li class="nav__item"><a href="#solution" class="nav__link">How Do We Solve This?</a></li>
+      <li class="nav__item"><a href="#action" class="nav__link">Take Action</a></li>
+      <li class="nav__item"><a href="#questions" class="nav__link">Your Questions</a></li>
+      <li class="nav__item"><a href="https://wdrws.org" class="nav__link" target="_blank" rel="noopener noreferrer">Dive Deeper on our technical site</a></li>
+    </ul>
+  </div>
+</nav>
 <div class="hero">
   <div class="inner hero__inner">
     <img class="hero__logo" alt="WDRWS" src="/img/wdrws-mark.png"/>
@@ -44,7 +61,7 @@
 
   </div>
 </div>
-<div class="section section--1">
+<div class="section section--1" id="problem">
   <div class="inner">
     <h2>The Problem</h2>
     <p>This data is derived from an independent study conducted by the South Dakota School of Mines that was
@@ -58,7 +75,7 @@
       <p>aaaa</p>
     </div>-->
 </div>
-<div class="section section--2">
+<div class="section section--2" id="urgency">
   <img src="/img/WDRWS-Landing-3.jpeg" alt=""/>
   <div class="inner">
     <h2>Urgency</h2>
@@ -92,7 +109,7 @@
     </script>
   </div>
 </div>
-<div class="section section--3">
+<div class="section section--3" id="solution">
   <div class="section__bottom">
     <div class="inner">
       <h2>How Do We Solve This?</h2>
@@ -101,7 +118,7 @@
     </div>
   </div>
 </div>
-<div class="section section--4">
+<div class="section section--4" id="action">
   <img src="/img/WDRWS-Landing-5.jpeg" alt=""/>
   <div class="inner">
     <h2>Take Action
@@ -132,7 +149,7 @@
   </div>
 
 </div>
-<div class="section section--5">
+<div class="section section--5" id="questions">
   <img src="/img/WDRWS-Landing-6.jpeg" alt=""/>
   <div class="inner">
     <h2>Your Questions</h2>
