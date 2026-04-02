@@ -267,6 +267,10 @@ textarea {
 }
 
 /* Optional: use Gotham as the default site font */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Gotham", Arial, sans-serif;
   margin: 0;
@@ -348,6 +352,12 @@ img{
 .section{
   padding: 0;
   font-size: 1.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section a{
+  color: white;
 }
 
 .section .inner{
@@ -397,11 +407,12 @@ img{
 
 .flex{
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
 .third{
-  width: 30%;
+  width: 100%;
   flex-grow: 1;
 }
 
@@ -429,31 +440,48 @@ img{
   text-align: center;
   box-sizing: border-box;
   font-weight: bold;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background .2s ease-in-out;
 }
 
-.contact-form input[type=text]{
+.contact-form a:hover, .contact-form input[type=submit]:hover{
+  background: var(--blue2);
+}
+
+.contact-form form{
+  display: block;
+}
+
+.contact-form label{
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contact-form label span{
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.contact-form input[type=text],
+.contact-form textarea{
   background: rgb(28 135 200 / 0.13);
   color: #ffffff;
   border: #9eb6cb solid 1px;
   padding: 1rem;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 1rem;
+  display: block;
 }
 
-.contact-form p{
-  font-size: 1rem;
+.contact-form textarea{
+  height: 150px;
 }
 
-
-
-
-.contact-form label{
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.contact-form input[type=text]::placeholder{
+.contact-form input[type=text]::placeholder,
+.contact-form textarea::placeholder{
   color: #9eb6cb;
 }
 
@@ -476,6 +504,10 @@ img{
   margin-bottom: 0;
 }
 
+.section--5 h2{
+  margin-bottom: 2rem;
+}
+
 .section--5 p{
   margin-top: 0;
 }
@@ -484,7 +516,8 @@ img{
   background: var(--tan);
   color: white;
   background-image: url("/img/dots.png");
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .section--6 h3{
