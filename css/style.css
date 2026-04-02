@@ -467,7 +467,7 @@ img{
   margin-bottom: .5rem;
 }
 
-.contact-form input[type=text],
+.contact-form input,
 .contact-form textarea{
   background: rgb(28 135 200 / 0.13);
   color: #ffffff;
@@ -482,7 +482,7 @@ img{
   height: 150px;
 }
 
-.contact-form input[type=text]::placeholder,
+.contact-form input::placeholder,
 .contact-form textarea::placeholder{
   color: #9eb6cb;
 }
