@@ -343,12 +343,14 @@ img{
   max-width: 100%;
 }
 
+
 .hero__bottom h1 {
   font-size: 9rem;
   line-height: .9;
   text-transform: uppercase;
   color: var(--yellow);
 }
+
 .section{
   padding: 0;
   font-size: 1.4rem;
@@ -553,4 +555,21 @@ footer{
 footer img{
   width: 300px;
   max-width: 100%;
+}
+
+
+@media (max-width: 800px) {
+  .hero__bottom h1 {
+    font-size: 6rem;
+  }
+  .hero h1{
+    font-size: 4rem;
+  }
+  .section h2{
+    font-size: 3rem;
+  }
+
+  .section--6 h3{
+    font-size: 2.5rem;
+  }
 }
