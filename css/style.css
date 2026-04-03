@@ -309,7 +309,7 @@ body {
 }
 
 .hero__logo{
-  width: 175px;
+  width: 75px;
   margin-top: 2rem;
 }
 
@@ -705,3 +705,43 @@ footer img{
     font-size: 2.5rem;
   }
 }
+
+.video-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #9a9a9a;
+  background: rgb(28 135 200 / 0.16);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 2rem 0;
+}
+
+.video-placeholder__play {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 150px;
+  border-radius: 18px;
+  background: #515151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder__triangle {
+  width: 0;
+  height: 0;
+  border-left: 46px solid #ffffff;
+  border-top: 32px solid transparent;
+  border-bottom: 32px solid transparent;
+  margin-left: 4px;
+}
+ .section .inner .footnote{
+   font-size: .8rem;
+   font-style: italic;
+   width: 100%;
+   max-width: 100%;
+ }
