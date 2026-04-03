@@ -501,9 +501,46 @@ img{
   color: white;
 }
 
-.section--5 h3{
+.faq-item {
+  width: 100%;
+}
+
+.faq-item h3 {
   color: var(--yellow);
   margin-bottom: 0;
+  cursor: pointer;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.faq-item h3::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.is-open h3::after {
+  content: "-";
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-item .faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+  overflow: hidden;
+}
+
+.faq-item.is-open .faq-content {
+  grid-template-rows: 1fr;
+}
+
+.faq-content > div {
+  min-height: 0;
 }
 
 .section--5 h2{
