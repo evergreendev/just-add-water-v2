@@ -428,6 +428,7 @@ img{
 .contact-form{
   background: var(--blue2);
   padding: 2rem;
+  margin-top: 2rem;
 }
 
 .contact-form input[type=submit]{
