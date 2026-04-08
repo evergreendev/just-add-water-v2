@@ -172,9 +172,9 @@ textarea {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -370,7 +370,7 @@ img{
 }
 
 .section .inner p{
-  max-width: 25em;
+  /*max-width: 25em;*/
 }
 
 .section h2{
@@ -905,6 +905,18 @@ footer .footer__design img {
   .section--3{
     padding-top: 100vw;
     background-position: center;
+  }
+}
+
+@media (max-height: 800px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .hero__bottom h1 {
+    font-size: 5rem;
+  }
+  .hero__bottom {
+    padding-bottom: 4rem;
   }
 }
 
