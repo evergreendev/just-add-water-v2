@@ -389,7 +389,33 @@
         return;
       }
 
-      placeholder.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
+      const thumbnailCandidates = [
+        `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+        `https://img.youtube.com/vi/${videoId}/sddefault.jpg`,
+        `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+      ];
+
+      const applyThumbnail = (index = 0) => {
+        if (index >= thumbnailCandidates.length) {
+          return;
+        }
+
+        const image = new Image();
+        image.onload = () => {
+          if (image.naturalWidth <= 120 || image.naturalHeight <= 90) {
+            applyThumbnail(index + 1);
+            return;
+          }
+
+          placeholder.style.backgroundImage = `url(${thumbnailCandidates[index]})`;
+        };
+        image.onerror = () => {
+          applyThumbnail(index + 1);
+        };
+        image.src = thumbnailCandidates[index];
+      };
+
+      applyThumbnail();
 
       placeholder.addEventListener('click', () => {
         const iframe = document.createElement('iframe');
