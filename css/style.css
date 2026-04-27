@@ -839,11 +839,16 @@ footer .footer__design img {
   aspect-ratio: 16 / 9;
   border: 1px solid #9a9a9a;
   background: rgb(28 135 200 / 0.16);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 24px;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
   margin: 2rem 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .video-placeholder__play {
@@ -867,6 +872,16 @@ footer .footer__design img {
   border-bottom: 32px solid transparent;
   margin-left: 4px;
 }
+
+.video-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 24px;
+  display: block;
+  margin: 2rem 0;
+}
+
 .section .inner .footnote{
   font-size: .8rem;
   font-style: italic;
@@ -912,6 +927,11 @@ footer .footer__design img {
     border-left-width: 23px;
     border-top-width: 16px;
     border-bottom-width: 16px;
+  }
+
+  .video-embed {
+    border-radius: 12px;
+    margin: 1rem 0;
   }
 
   .section--3{

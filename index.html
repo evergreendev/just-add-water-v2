@@ -68,11 +68,12 @@
 
   <div class="inner">
     <h2>Our Problem</h2>
-    <div class="video-placeholder" aria-label="Video placeholder">
-      <div class="video-placeholder__play" aria-hidden="true">
+    <button class="video-placeholder js-video-placeholder" type="button" aria-label="Play video: Our Problem"
+            data-video-id="kuu9IcYKKfQ">
+      <span class="video-placeholder__play" aria-hidden="true">
         <span class="video-placeholder__triangle"></span>
-      </div>
-    </div>
+      </span>
+    </button>
     <p>This data is derived from an independent study conducted by the South Dakota School of Mines that was
       subsequently verified by the United States Geological Survey (USGS). To access the comprehensive, in-depth study,
       please consult our <a href="https://wdrws.org/drought">technical site</a>.
@@ -130,11 +131,12 @@
   <div class="section__bottom">
     <div class="inner">
       <h2>How Do We Solve This?</h2>
-      <div class="video-placeholder" aria-label="Video placeholder">
-        <div class="video-placeholder__play" aria-hidden="true">
+      <button class="video-placeholder js-video-placeholder" type="button" aria-label="Play video: How Do We Solve This?"
+              data-video-id="HiXPVEQtxQA">
+        <span class="video-placeholder__play" aria-hidden="true">
           <span class="video-placeholder__triangle"></span>
-        </div>
-      </div>
+        </span>
+      </button>
       <p>To take a deeper dive into the solution and the progress that’s already been made and more, please visit our <a
         href="https://wdrws.org/progress">technical site</a>.</p>
     </div>
@@ -376,6 +378,34 @@
     </div>
   </div>
 </footer>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const placeholders = document.querySelectorAll('.js-video-placeholder');
+
+    placeholders.forEach((placeholder) => {
+      const videoId = placeholder.dataset.videoId;
+      if (!videoId) {
+        return;
+      }
+
+      placeholder.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
+
+      placeholder.addEventListener('click', () => {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        iframe.title = 'YouTube video player';
+        iframe.className = 'video-embed';
+        iframe.frameBorder = '0';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.allowFullscreen = true;
+
+        placeholder.replaceWith(iframe);
+      }, {once: true});
+    });
+  });
+</script>
 
 </body>
 
