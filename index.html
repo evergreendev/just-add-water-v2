@@ -307,21 +307,50 @@
       <h3>Submit Your Question</h3>
       <p style="margin-bottom: 2rem;">If you don’t see your question addressed above, use the form below to submit it,
         and our team will provide a response or consider it for inclusion in future updates.</p>
-      <form action="send.php" method="post" enctype="multipart/form-data">
+      <form id="contactForm">
         <label>
           <span>Name</span>
-          <input type="text" name="name" placeholder="Your Name"/>
+          <input type="text" name="name" required />
         </label>
         <label>
           <span>Email Address</span>
-          <input type="text" name="email" placeholder="email@example.com"/>
+          <input type="email" name="email" required />
         </label>
         <label>
           <span>Your Question</span>
-          <textarea name="question"></textarea>
+          <textarea name="question" required></textarea>
         </label>
         <input type="submit" value="Submit"/>
       </form>
+
+      <div id="status"></div>
+      <script>
+        document.getElementById("contactForm").addEventListener("submit", async function (e) {
+          e.preventDefault(); // stop normal page navigation
+
+          const form = e.target;
+          const formData = new FormData(form);
+          const status = document.getElementById("status");
+
+          try {
+            const res = await fetch("send.php", {
+              method: "POST",
+              body: formData
+            });
+
+            const text = await res.text();
+
+            if (res.ok) {
+              status.textContent = "Message sent.";
+              form.reset();
+            } else {
+              status.textContent = text || "Error sending message.";
+            }
+          } catch (err) {
+            status.textContent = "Network error.";
+          }
+        });
+      </script>
     </div>
   </div>
 </div>
