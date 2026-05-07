@@ -6,7 +6,11 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C7JLQ30YWJ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
 
     gtag('config', 'G-C7JLQ30YWJ');
@@ -45,7 +49,8 @@
       <li class="nav__item"><a href="#solution" class="nav__link">How Do We Solve This?</a></li>
       <li class="nav__item"><a href="#action" class="nav__link">Take Action</a></li>
       <li class="nav__item"><a href="#questions" class="nav__link">Your Questions</a></li>
-      <li class="nav__item"><a href="https://wdrws.org/discover" class="nav__link" target="_blank" rel="noopener noreferrer">Dive
+      <li class="nav__item"><a href="https://wdrws.org/discover" class="nav__link" target="_blank"
+                               rel="noopener noreferrer">Dive
         Deeper on our technical site</a></li>
     </ul>
   </div>
@@ -98,7 +103,8 @@
   <div class="section__bottom">
     <div class="inner">
       <h2>How Do We Solve This?</h2>
-      <button class="video-placeholder js-video-placeholder" type="button" aria-label="Play video: How Do We Solve This?"
+      <button class="video-placeholder js-video-placeholder" type="button"
+              aria-label="Play video: How Do We Solve This?"
               data-video-id="HiXPVEQtxQA">
         <span class="video-placeholder__play" aria-hidden="true">
           <span class="video-placeholder__triangle"></span>
@@ -122,7 +128,8 @@
       your
       community is currently experiencing drought.
     </p>
-    <p style="text-align: center; font-size: 2rem;"><strong>This map is automatically updated every Thursday.</strong></p>
+    <p style="text-align: center; font-size: 2rem;"><strong>This map is automatically updated every Thursday.</strong>
+    </p>
     <img id="drought-monitor-image" src="https://droughtmonitor.unl.edu/data/png/current/current_sd_text.png"
          alt=""/>
     <p class="footnote">
@@ -139,6 +146,11 @@
     <p>You can also continue your research by exploring our curated list at our <a
       href="https://wdrws.org/western-dakota-regional-water-watch">Western Dakota Regional Water
       Watch</a> where you’ll find real-time forecasts, climate trends, regional insights, and more.</p>
+
+    <p>
+      The inflow and outflow of reservoirs offers clues into the water security of western South Dakota. Use <a href="https://www.usbr.gov/gp/hydromet/inflow.html">this tool</a>
+      from the Bureau of Reclamation to monitor these levels for yourself.
+    </p>
 
 
     <script>
@@ -319,11 +331,11 @@
       <form id="contactForm">
         <label>
           <span>Name</span>
-          <input type="text" name="name" required />
+          <input type="text" name="name" required/>
         </label>
         <label>
           <span>Email Address</span>
-          <input type="email" name="email" required />
+          <input type="email" name="email" required/>
         </label>
         <label>
           <span>Your Question</span>
