@@ -5,7 +5,7 @@
       <paths name="evergreen-live">
         <serverdata>
           <mappings>
-            <mapping deploy="/egmrc.com/justaddwater.egmrc.com" local="$PROJECT_DIR$/dist" web="/" />
+            <mapping deploy="/justaddwatersd.org/httpdocs" local="$PROJECT_DIR$/dist" web="/" />
           </mappings>
         </serverdata>
       </paths>
